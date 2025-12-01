@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".activity.Transaksisukses_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/icon_success"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="Transaksi Berhasil"
+            android:src="@drawable/baktibersama"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/text_view_thank_you_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Transaksi Berhasil!"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/terimakasih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Pembayaran Anda telah berhasil diproses. Terima kasih atas transaksi Anda."
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnuploadbukti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="?attr/colorError"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="Upload Bukti Setor"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnkembalikehome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="Kembali ke Beranda"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

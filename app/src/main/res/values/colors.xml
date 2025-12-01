@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="design_default_color_primary">#6200EE</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="my_primary_color">#8ABF6A</color>
+    <color name="my_primary_variant">#31EBAA</color>
+    <color name="my_on_primary_color">#FFFFFFFF</color>
+    <color name="my_secondary_color">#FF03A9F4</color>
+    <color name="my_secondary_variant">#FF0288D1</color>
+    <color name="my_on_secondary_color">#FF000000</color>
+    <color name="my_background_color">#FFF0F0F0</color>
+    <color name="my_surface_color">#FFFFFFFF</color>
+    <color name="my_on_background_color">#FF212121</color>
+    <color name="my_error_color">#EF7D50</color>
+    <color name="my_on_error_color">#FFFFFFFF</color>
+
+    <color name="orange1">#E28B0E</color>
+    <color name="orange2">#E97309</color>
+    <color name="bakutama">#208371</color>
+
+    <color name="tombol">#E084E7</color>
+    <color name="color_step_active">#4CAF50</color> <color name="color_step_inactive">#B0BEC5</color> <color name="color_timeline_line">#E0E0E0</color> <color name="color_text_dark">#212121</color>
+    <color name="color_text_light">#757575</color>
+
+    <color name="my_custom_launcher_background_color">#D7EDED</color>
+    <color name="grayaja">#C93C4478</color>
+
+    <color name="red_400">#C9E9103F</color>
+    <color name="green_400">#F505900C</color>
+    <color name="birutext">#F5051E90</color>
+</resources>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface"
+    tools:context=".activity.Konfirmasi_Donasi_Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        >
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="KONFIRMASI DONASI"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/ldonatur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:paddingBottom="10dp"
+            android:text="Nama Donatur :  "
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/judul" />
+
+        <TextView
+            android:id="@+id/ndonatur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Nama Donaturnya"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ldonatur"
+            app:layout_constraintTop_toBottomOf="@id/judul" />
+
+        <TextView
+            android:id="@+id/ldonasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:paddingStart="28dp"
+            android:paddingBottom="10dp"
+            android:text="Donasi Untuk :  "
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ldonatur" />
+
+        <TextView
+            android:id="@+id/ndonasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Nama Donasi"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ldonasi"
+            app:layout_constraintTop_toBottomOf="@id/ndonatur" />
+
+        <TextView
+            android:id="@+id/lmetode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:paddingBottom="10dp"
+            android:text="Metode Donasi :  "
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ndonasi" />
+
+        <TextView
+            android:id="@+id/nmetode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Metode Donasi"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/lmetode"
+            app:layout_constraintTop_toBottomOf="@id/ndonasi" />
+
+        <TextView
+            android:id="@+id/lnominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:paddingBottom="10dp"
+            android:text="Nominal Donasi :  "
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lmetode" />
+
+        <TextView
+            android:id="@+id/nnominal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Nilai Donasi"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lnominal"
+            app:layout_constraintTop_toBottomOf="@id/nmetode" />
+
+        <TextView
+            android:id="@+id/linfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:paddingStart="20dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="15dp"
+            android:text="Silakan Sampaikan Donasi anda Via Transfer melalui Rekening Resmi UPZ Bakti Bersama pada :"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nnominal" />
+
+
+        <TextView
+            android:id="@+id/bsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:text="BSI - 100 111 1104"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/birutext"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linfo" />
+
+        <TextView
+            android:id="@+id/kalsel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp"
+            android:text="Bank Kalsel Syariah - 730 015 6171"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/birutext"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bsi" />
+
+        <Button
+            android:id="@+id/btnsimpandonasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary"
+            android:text="Donasi"
+            app:layout_constraintTop_toBottomOf="@id/kalsel" />
+
+        <Button
+            android:id="@+id/btnkembalidonasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="?attr/colorSecondary"
+            android:textColor="?attr/colorOnSecondary"
+            android:text="Kembali ke Beranda"
+            app:layout_constraintTop_toBottomOf="@id/btnsimpandonasi"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

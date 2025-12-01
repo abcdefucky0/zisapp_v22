@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Zisapp_v2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+            <item name="colorPrimary">#F638E0BE</item>
+            <item name="colorPrimaryVariant">@color/purple_700</item>
+            <item name="colorOnPrimary">@color/black</item>
+
+            <item name="colorSecondary">#07B15B</item>
+            <item name="colorSecondaryVariant">#5AD98C</item>
+            <item name="colorOnSecondary">@color/black</item>
+
+            <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+            <item name="colorSurface">#8B4E73F0</item>
+            <item name="colorOnSurface">@color/white</item>
+
+
+    </style>
+</resources>

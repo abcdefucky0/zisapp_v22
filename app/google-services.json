@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "206682394424",
+    "project_id": "solusiapkproject",
+    "storage_bucket": "solusiapkproject.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206682394424:android:d474e447faa42001eb7bcd",
+        "android_client_info": {
+          "package_name": "solusiapk.com.zisapp_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206682394424-k6dpvn6ir023l85p69nssfn6bumbcn7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1teKuC2eczHagSgRbFOAuJV_R8HL6JM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206682394424-k6dpvn6ir023l85p69nssfn6bumbcn7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

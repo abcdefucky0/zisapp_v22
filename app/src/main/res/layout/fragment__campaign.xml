@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBDBDB"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.Fragment_Campaign">
+
+    <!-- Header Hijau Custom -->
+    <LinearLayout
+        android:id="@+id/headerDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_green"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp">
+
+        <!-- Top Bar: Avatar + Text + Menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Avatar Circle -->
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/traffic_dot_yellow"
+                android:contentDescription="Avatar"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <!-- Greeting Text -->
+            <TextView
+                android:id="@+id/txtGreeting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Selamat Datang User"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="right">
+
+                <!-- Triple Dot Menu -->
+                <ImageView
+                    android:id="@+id/btnMenu"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:padding="2dp"
+                    android:contentDescription="Menu"
+                    android:src="@drawable/traffic_dot_white"
+                    android:tint="@android:color/white" />
+ <!-- Triple Dot Menu -->
+                <ImageView
+                    android:id="@+id/btnMenu2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:padding="2dp"
+                    android:contentDescription="Menu"
+                    android:src="@drawable/traffic_dot_white"
+                    android:tint="@android:color/white" />
+ <!-- Triple Dot Menu -->
+                <ImageView
+                    android:id="@+id/btnMenu3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:padding="2dp"
+                    android:contentDescription="Menu"
+                    android:src="@drawable/traffic_dot_white"
+                    android:tint="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- 3 Icon Menu: ZIS, History, Lainnya -->
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rounded"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- ZIS -->
+        <LinearLayout
+            android:id="@+id/menuZIS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="ZIS"
+                android:src="@drawable/traffic_dot_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ZIS"
+                android:textColor="#1E293B"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- History -->
+        <LinearLayout
+            android:id="@+id/menuHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="History"
+                android:src="@drawable/traffic_dot_red" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="History"
+                android:textColor="#1E293B"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Lainnya -->
+        <LinearLayout
+            android:id="@+id/menuLainnya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Lainnya"
+                android:src="@drawable/traffic_dot_yellow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Lainnya"
+                android:textColor="#1E293B"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ScrollView untuk konten -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="592dp"
+        android:layout_marginTop="150dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Slide Photo Banner -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPagerPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayoutIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        app:tabBackground="@drawable/tab_indicator_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Button Salurkan ZIS -->
+            <Button
+                android:id="@+id/btnsalurkanzis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/button_primary_background"
+                android:text="Salurkan ZIS Anda"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- WRAPPER DENGAN BACKGROUND HIJAU MULAI DARI SINI -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#10B981"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Section: Campaign Terbaru -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Campaign Terbaru"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtSemuaCampaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Selanjutnya"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- RecyclerView Campaign Horizontal -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/campaign_item" />
+
+                    <!-- Section: Doa Untuk Saudara Kita -->
+                    <!-- Section: Doa Untuk Saudara Kita -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <!-- Judul Section -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Doa Untuk Saudara Kita"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- Container untuk tombol sebelumnya dan selanjutnya -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtSebelumnyaDoa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:text="Sebelumnya"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/txtSelanjutnyaDoa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selanjutnya"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!-- Card Doa -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <!-- Avatar -->
+                            <TextView
+                                android:id="@+id/txtAvatarDoa"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circle_avatar_bg"
+                                android:gravity="center"
+                                android:text="A"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <!-- Content -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtNamaDoa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anonim"
+                                    android:textColor="#1E293B"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtCampaignDoa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Donasi Palestine"
+                                    android:textColor="#64748B"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/txtIsiDoa"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Semoga Bermanfaat dan Berkah Dunia dan Akhirat"
+                                    android:textColor="#475569"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                            <!-- Menu Icon -->
+                            <ImageView
+                                android:id="@+id/btnMenuDoa"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:contentDescription="Menu"
+                                android:src="@drawable/ic_menu_dots"
+                                android:tint="#94A3B8" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Section: Kata Mereka Tentang Bakti Bersama -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <!-- Judul Section -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kata Mereka Tentang Bakti Bersama"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- Container untuk tombol sebelumnya dan selanjutnya -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtSebelumnyaTestimoni"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="12dp"
+                                android:text="Sebelumnya"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/txtSelanjutnyaTestimoni"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selanjutnya"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout><!-- Card Testimoni -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <!-- Avatar -->
+                            <TextView
+                                android:id="@+id/txtAvatarTestimoni"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circle_avatar_bg"
+                                android:gravity="center"
+                                android:text="A"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <!-- Content -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtNamaTestimoni"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anonim"
+                                    android:textColor="#1E293B"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtCampaignTestimoni"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Donasi Palestine"
+                                    android:textColor="#64748B"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/txtIsiTestimoni"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Semoga Menjadi Wadah yang amanah dalam mengembang"
+                                    android:textColor="#475569"
+                                    android:textSize="13sp" />
+
+                                <!-- Rating Stars -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:src="@drawable/ic_star"
+                                        android:tint="#FCD34D" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginStart="2dp"
+                                        android:src="@drawable/ic_star"
+                                        android:tint="#FCD34D" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginStart="2dp"
+                                        android:src="@drawable/ic_star"
+                                        android:tint="#FCD34D" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginStart="2dp"
+                                        android:src="@drawable/ic_star"
+                                        android:tint="#FCD34D" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginStart="2dp"
+                                        android:src="@drawable/ic_star"
+                                        android:tint="#FCD34D" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- Menu Icon -->
+                            <ImageView
+                                android:id="@+id/btnMenuTestimoni"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:contentDescription="Menu"
+                                android:src="@drawable/ic_menu_dots"
+                                android:tint="#94A3B8" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- WRAPPER DENGAN BACKGROUND HIJAU SELESAI DI SINI -->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FAB Add Campaign -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Campaign Baru"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#10B981"
+        app:tint="@android:color/white" />
+
+    <!-- ProgressBar & Error -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#10B981"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Error loading data"
+        android:textColor="#DC2626"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
