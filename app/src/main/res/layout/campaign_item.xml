@@ -2,9 +2,12 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="340dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="12dp"
     app:cardElevation="4dp">
@@ -18,7 +21,7 @@
         <ImageView
             android:id="@+id/imgCampaign"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="140dp"
             android:background="#E2E8F0"
             android:contentDescription="Gambar Campaign"
             android:scaleType="centerCrop"
@@ -29,14 +32,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="16dp">
 
             <!-- Judul Campaign -->
             <TextView
                 android:id="@+id/textJudul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="6dp"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:textColor="#1E293B"
@@ -49,7 +52,7 @@
                 android:id="@+id/textOrganisasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="10dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:textColor="#64748B"
