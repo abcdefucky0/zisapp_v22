@@ -63,8 +63,7 @@
                     android:layout_height="10dp"
                     android:contentDescription="Menu"
                     android:padding="2dp"
-                    android:src="@drawable/traffic_dot_white"
-                    android:tint="@android:color/white" />
+                    android:src="@drawable/traffic_dot_white" />
                 <!-- Triple Dot Menu -->
                 <ImageView
                     android:id="@+id/btnMenu2"
@@ -72,8 +71,7 @@
                     android:layout_height="10dp"
                     android:contentDescription="Menu"
                     android:padding="2dp"
-                    android:src="@drawable/traffic_dot_white"
-                    android:tint="@android:color/white" />
+                    android:src="@drawable/traffic_dot_white" />
                 <!-- Triple Dot Menu -->
                 <ImageView
                     android:id="@+id/btnMenu3"
@@ -81,8 +79,7 @@
                     android:layout_height="10dp"
                     android:contentDescription="Menu"
                     android:padding="2dp"
-                    android:src="@drawable/traffic_dot_white"
-                    android:tint="@android:color/white" />
+                    android:src="@drawable/traffic_dot_white"/>
 
             </LinearLayout>
 
@@ -232,8 +229,8 @@
     <!-- ScrollView untuk konten -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="592dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
         android:fillViewport="true">
 
         <LinearLayout
@@ -278,10 +275,10 @@
                 android:id="@+id/btnsalurkanzis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="4dp"
-                android:background="@drawable/button_primary_background"
+                android:background="@android:color/transparent"
                 android:text="Salurkan ZIS Anda"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
@@ -291,7 +288,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#10B981"
+                android:layout_marginBottom="32dp"
+                app:cardBackgroundColor="#207357"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -339,7 +337,6 @@
                         tools:listitem="@layout/campaign_item" />
 
                     <!-- Section: Doa Untuk Saudara Kita -->
-                    <!-- Section: Doa Untuk Saudara Kita -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -355,6 +352,7 @@
                             android:textColor="@android:color/white"
                             android:textSize="18sp"
                             android:textStyle="bold" />
+
                         <!-- Container untuk tombol sebelumnya dan selanjutnya -->
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -389,6 +387,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
+
                     <!-- Card Doa -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -519,7 +518,8 @@
 
                         </LinearLayout>
                     </LinearLayout>
-                    </LinearLayout><!-- Card Testimoni -->
+
+                    <!-- Card Testimoni -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -584,57 +584,21 @@
                                     android:textSize="13sp" />
 
                                 <!-- Rating Stars -->
-                                <LinearLayout
+
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:src="@drawable/ic_star"
-                                        android:tint="#FCD34D" />
-
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:layout_marginStart="2dp"
-                                        android:src="@drawable/ic_star"
-                                        android:tint="#FCD34D" />
-
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:layout_marginStart="2dp"
-                                        android:src="@drawable/ic_star"
-                                        android:tint="#FCD34D" />
-
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:layout_marginStart="2dp"
-                                        android:src="@drawable/ic_star"
-                                        android:tint="#FCD34D" />
-
-                                    <ImageView
-                                        android:layout_width="16dp"
-                                        android:layout_height="16dp"
-                                        android:layout_marginStart="2dp"
-                                        android:src="@drawable/ic_star"
-                                        android:tint="#FCD34D" />
-
-                                </LinearLayout>
+                                    android:text="⭐⭐⭐⭐"/>
 
                             </LinearLayout>
 
                             <!-- Menu Icon -->
                             <ImageView
                                 android:id="@+id/btnMenuTestimoni"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
                                 android:contentDescription="Menu"
-                                android:src="@drawable/ic_menu_dots"
+                                android:src="@drawable/traffic_dot_white"
                                 android:tint="#94A3B8" />
 
                         </LinearLayout>
@@ -644,13 +608,12 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-            <!-- WRAPPER DENGAN BACKGROUND HIJAU SELESAI DI SINI -->
 
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-    <!-- FAB Add Campaign -->
+    <!-- FAB Add Campaign - DIPINDAHKAN KE LUAR NESTEDSCROLLVIEW -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddPost"
         android:layout_width="wrap_content"
