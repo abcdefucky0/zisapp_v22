@@ -32,13 +32,11 @@
                 <View
                     android:id="@+id/sidebar"
                     android:layout_width="8dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="485dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:background="#10B981"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
+                    android:background="#10B981" />
 
                 <!-- Traffic Lights Dots -->
                 <LinearLayout
@@ -136,14 +134,14 @@
                         android:id="@+id/btnuploadbukti"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
+                        android:layout_marginBottom="12dp"
                         android:background="@color/red_400"
-                        android:text="Upload Bukti Setor"
-                        android:textColor="#DC2626"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:stateListAnimator="@null"
                         android:elevation="0dp"
-                        android:layout_marginBottom="12dp" />
+                        android:stateListAnimator="@null"
+                        android:text="Upload Bukti Setor"
+                        android:textColor="#FAFAFA"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <!-- Button Kembali ke Beranda -->
                     <Button
