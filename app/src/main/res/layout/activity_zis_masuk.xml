@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#F8FAFC"
+    android:background="#E8E8E8"
     tools:context=".activity.Zis_Masuk_Activity">
 
     <LinearLayout
@@ -43,11 +43,11 @@
                 <View
                     android:id="@+id/sidebar"
                     android:layout_width="5dp"
-                    android:layout_height="800dp"
+                    android:layout_height="680dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:background="#10B981" />
+                    android:background="#fffff" />
 
                 <!-- Traffic Lights Dots -->
                 <LinearLayout
@@ -216,8 +216,7 @@
                         android:id="@+id/radioGroup2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
                         <com.google.android.material.radiobutton.MaterialRadioButton
                             android:id="@+id/Tunai"
@@ -235,8 +234,18 @@
                             android:text="Transfer"
                             android:textColor="#475569"
                             android:textSize="14sp"
+                            android:layout_marginLeft="67dp"
                             app:buttonTint="#22C55E" />
 
+
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
                         <com.google.android.material.radiobutton.MaterialRadioButton
                             android:id="@+id/ewalet"
                             android:layout_width="wrap_content"
@@ -253,9 +262,12 @@
                             android:text="Virtual Account"
                             android:textColor="#475569"
                             android:textSize="14sp"
+                            android:layout_marginLeft="50dp"
                             app:buttonTint="#22C55E" />
 
+
                     </RadioGroup>
+
 
                     <!-- Nominal Donasi -->
                     <com.google.android.material.textfield.TextInputLayout
